@@ -17,8 +17,11 @@ package com.example.android.datafrominternet;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,7 +56,24 @@ public class MainActivity extends AppCompatActivity {
     // TODO (9) Within onCreateOptionsMenu, use getMenuInflater().inflate to inflate the menu
     // TODO (10) Return true to display your menu
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+        //return super.onCreateOptionsMenu(menu);
+    }
+
     // TODO (11) Override onOptionsItemSelected
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int selectedItem = item.getItemId();
+        if (selectedItem==R.id.action_search)
+            Toast.makeText(this,"Search clicked", Toast.LENGTH_LONG).show();
+        return true;
+        //return super.onOptionsItemSelected(item);
+    }
+
     // TODO (12) Within onOptionsItemSelected, get the ID of the item that was selected
     // TODO (13) If the item's ID is R.id.action_search, show a Toast and return true to tell Android that you've handled this menu click
     // TODO (14) Don't forgot to call .show() on your Toast
