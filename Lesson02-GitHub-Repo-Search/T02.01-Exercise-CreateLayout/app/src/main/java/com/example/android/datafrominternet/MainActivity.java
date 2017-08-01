@@ -23,12 +23,12 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     // TODO (26) Create an EditText variable called mSearchBoxEditText
-    EditText mSearchBoxEditText = null;
+    private EditText mSearchBoxEditText = null;
 
     // TODO (27) Create a TextView variable called mUrlDisplayTextView
-    TextView mUrlDisplayTextView = null;
+    private TextView mUrlDisplayTextView = null;
     // TODO (28) Create a TextView variable called mSearchResultsTextView
-    TextView mSearchResultsTextView = null;
+    private TextView mSearchResultsTextView = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
