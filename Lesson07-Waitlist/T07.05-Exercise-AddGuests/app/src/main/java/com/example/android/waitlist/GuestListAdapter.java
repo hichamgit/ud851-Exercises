@@ -87,6 +87,14 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
             nameTextView = (TextView) itemView.findViewById(R.id.name_text_view);
             partySizeTextView = (TextView) itemView.findViewById(R.id.party_size_text_view);
         }
-
+    }
+    public void swapCursor(Cursor newCursor) {
+        // Always close the previous mCursor first
+        if (mCursor != null) mCursor.close();
+        mCursor = newCursor;
+        if (newCursor != null) {
+            // Force the RecyclerView to refresh
+            this.notifyDataSetChanged();
+        }
     }
 }
