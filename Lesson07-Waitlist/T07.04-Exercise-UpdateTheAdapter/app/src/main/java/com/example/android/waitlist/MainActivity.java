@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         // Get all guest info from the database and save in a cursor
         Cursor cursor = getAllGuests();
 
-        // TODO (10) Pass the entire cursor to the adapter rather than just the count
+        // TODO done (10) Pass the entire cursor to the adapter rather than just the count
         // Create an adapter for that cursor to display the data
         //mAdapter = new GuestListAdapter(this, cursor.getCount());
         mAdapter = new GuestListAdapter(this, cursor);
